@@ -1,0 +1,162 @@
+/* ==========================================
+   ESTILOS GLOBAIS E EFEITOS NEON
+   ========================================== */
+
+/* Efeito de seleção de texto personalizado */
+::selection {
+    background: #00f3ff;
+    color: #050505;
+}
+
+/* Estilo de fundo de vidro (Glassmorphism) */
+.navegacao-vidro {
+    background: rgba(5, 5, 5, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Bordas e sombras neon */
+.borda-inferior-ciano {
+    border-bottom: 2px solid #00f3ff;
+}
+
+.caixa-neon-ciano {
+    border: 1px solid rgba(0, 243, 255, 0.4);
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.15);
+}
+
+.caixa-neon-vermelho {
+    border: 1px solid rgba(255, 51, 0, 0.4);
+    box-shadow: 0 0 15px rgba(255, 51, 0, 0.15);
+}
+
+.caixa-neon-rosa {
+    border: 1px solid rgba(255, 0, 255, 0.4);
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.15);
+}
+
+/* Efeitos de texto luminoso */
+.texto-neon-ciano {
+    color: #00f3ff;
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+}
+
+.texto-neon-vermelho {
+    color: #ff3300;
+    text-shadow: 0 0 15px rgba(255, 51, 0, 0.6);
+}
+
+.texto-neon-rosa {
+    color: #ff00ff;
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+}
+
+/* Transições suaves gerais */
+.transicao-suave {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (hover: hover) {
+    .efeito-brilho:hover {
+        transform: translateY(-4px);
+    }
+}
+
+/* ==========================================
+   CONTROLE DEFINITIVO DO MENU MOBILE
+   ========================================== */
+
+/* Estado padrão: Oculto em telas mobile */
+.menu-mobile-custom {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Estado ativo: Exibido quando o JS adiciona a classe .is-open */
+.menu-mobile-custom.is-open {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Segurança para telas desktop (md: 768px ou mais): sempre oculto */
+@media (min-width: 768px) {
+    .menu-mobile-custom {
+        display: none !important;
+    }
+}
+
+/* ==========================================
+   AJUSTES MOBILE / RESPONSIVIDADE
+   ========================================== */
+
+/* Evita que o menu fixo cubra o título ao navegar pelas âncoras */
+section[id] {
+    scroll-margin-top: 4rem;
+}
+
+/* Hero ocupa a tela toda sem "pular" com a barra do navegador mobile */
+.hero-altura {
+    min-height: 100vh;
+    min-height: 100svh;
+}
+
+/* Hifenização evita buracos no texto justificado e palavras estourando */
+.conteudo-texto p,
+.item-aplicacao p {
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    overflow-wrap: break-word;
+}
+
+/* Classes usadas no HTML que não tinham definição */
+.gradiente-heroi {
+    background: radial-gradient(ellipse at 50% 40%, rgba(255, 51, 0, 0.18), transparent 65%);
+}
+
+.sombra-heroi {
+    box-shadow: 0 8px 40px rgba(255, 51, 0, 0.25);
+}
+
+.sombra-imagem-ciano {
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.45);
+}
+
+.sombra-imagem-rosa {
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.45);
+}
+
+.sombra-botao-topo {
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+    bottom: max(1.5rem, env(safe-area-inset-bottom));
+}
+
+.links-sociais a:hover { color: #ff00ff; }
+.lista-fontes a:hover { background: rgba(0, 243, 255, 0.15); color: #00f3ff; }
+
+@keyframes piscar-neon {
+    0%, 100% { opacity: 1; }
+    92%      { opacity: 1; }
+    94%      { opacity: 0.55; }
+    96%      { opacity: 1; }
+    98%      { opacity: 0.7; }
+}
+
+.piscar {
+    animation: piscar-neon 4s infinite;
+}
+
+/* Respeita quem desativa animações no celular */
+@media (prefers-reduced-motion: reduce) {
+    .piscar,
+    .animate-spin,
+    .animate-pulse {
+        animation: none !important;
+    }
+    html {
+        scroll-behavior: auto !important;
+    }
+}
