@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050505">
+    <title>NÉON (Ne) - O Gás Nobre Brilhante</title>
+    
+    <!-- Google Fonts: Orbitron & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neonVermelho: '#ff3300',
+                        neonCiano: '#00f3ff',
+                        neonRosa: '#ff00ff',
+                        neonVerde: '#00ff66',
+                        fundoEscuro: '#050505',
+                    },
+                    fontFamily: {
+                        orbitron: ['Orbitron', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-fundoEscuro text-gray-100 font-poppins antialiased selecao-neon overflow-x-hidden">
+
+    <!-- BARRA DE NAVEGAÇÃO -->
+    <header>
+        <nav class="navegacao-vidro fixed top-0 left-0 w-full z-50 transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+                <a href="#inicio" class="font-orbitron font-extrabold text-lg sm:text-xl tracking-wider texto-neon-ciano flex items-center gap-2">
+                    <i class="fa-solid fa-atom animate-spin" style="animation-duration: 8s;"></i> Ne-10
+                </a>
+                
+                <!-- Botão Menu Mobile -->
+                <button id="botao-menu" class="md:hidden flex items-center justify-center w-11 h-11 -mr-2 text-gray-300 hover:text-neonCiano focus:outline-none text-xl" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Menu Dropdown Mobile Único e Corrigido -->
+            <div id="menu-mobile" class="menu-mobile-custom md:hidden absolute inset-x-0 top-full navegacao-vidro borda-inferior-ciano px-6 pt-3 pb-5 font-orbitron text-center shadow-2xl max-h-[calc(100vh-4rem)] overflow-y-auto">
+                <a href="#inicio" class="block py-3.5 text-gray-300 hover:text-neonCiano link-mobile">Início</a>
+                <a href="#caracteristicas" class="block py-3.5 text-gray-300 hover:text-neonCiano link-mobile">Propriedades</a>
+                <a href="#sobre" class="block py-3.5 text-gray-300 hover:text-neonCiano link-mobile">O Elemento</a>
+                <a href="#aplicacoes" class="block py-3.5 text-gray-300 hover:text-neonCiano link-mobile">Aplicações</a>
+                <a href="#creditos" class="block py-3.5 text-gray-300 hover:text-neonCiano link-mobile">Créditos</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SEÇÃO HERO -->
+    <section id="inicio" class="relative hero-altura flex flex-col justify-center items-center text-center px-4 pt-20 border-b-2 border-neonVermelho sombra-heroi">
+        <div class="absolute inset-0 gradiente-heroi pointer-events-none"></div>
+        
+        <div class="z-10 max-w-4xl mx-auto space-y-6">
+            <div class="inline-block px-4 py-1.5 rounded-full border border-neonVermelho/50 bg-neonVermelho/10 text-neonVermelho text-xs sm:text-sm font-orbitron tracking-widest mb-2 animate-pulse">
+                GRUPO 18 • GÁS NOBRE
+            </div>
+            <h1 class="font-orbitron text-3xl min-[400px]:text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-wider sm:tracking-widest texto-neon-vermelho piscar">
+                NÉON (Ne)
+            </h1>
+            <h2 class="font-orbitron text-lg sm:text-2xl md:text-3xl text-gray-300 font-light tracking-wide texto-neon-ciano">
+                O Gás Nobre Brilhante e Inerte
+            </h2>
+            <p class="max-w-2xl mx-auto text-gray-400 text-sm sm:text-base font-light pt-2 px-2">
+                Conheça a história de sua descoberta em Londres, suas propriedades termodinâmicas extremas, comportamento espectral e seu papel crucial na tecnologia moderna e criogenia.
+            </p>
+            <div class="pt-4 flex flex-col min-[420px]:flex-row items-center justify-center gap-3 sm:gap-4">
+                <a href="#caracteristicas" class="w-full max-w-[260px] min-[420px]:w-auto px-8 py-3 rounded-full font-orbitron text-xs sm:text-sm font-bold tracking-wider text-white caixa-neon-ciano hover:bg-cyan-500/20 transicao-suave sombra-lg">
+                    Explorar Dados <i class="fa-solid fa-arrow-down ml-2"></i>
+                </a>
+                <a href="#sobre" class="w-full max-w-[260px] min-[420px]:w-auto px-8 py-3 rounded-full font-orbitron text-xs sm:text-sm font-bold tracking-wider text-white caixa-neon-rosa hover:bg-pink-500/20 transicao-suave sombra-lg">
+                    Ler História <i class="fa-solid fa-book-open ml-2"></i>
+                </a>            
+            </div>
+        </div>
+    </section>
+
+    <!-- CARACTERÍSTICAS TÉCNICAS -->
+    <section id="caracteristicas" class="py-20 sm:py-28 px-4">
+        <div class="max-w-[1100px] mx-auto">
+            <h2 class="font-orbitron text-2xl sm:text-4xl text-center font-bold mb-4 texto-neon-ciano">
+                Ficha Técnica e Propriedades
+            </h2>
+            <p class="text-center text-gray-400 text-sm max-w-xl mx-auto mb-12">
+                Dados físicos e estruturais oficiais extraídos de referências acadêmicas de química.
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Cartão 1 -->
+                <div class="cartao-recurso caixa-neon-vermelho p-6 rounded-2xl text-center transicao-suave efeito-brilho flex flex-col justify-between">
+                    <div>
+                        <div class="text-neonVermelho text-3xl mb-3"><i class="fa-solid fa-hashtag"></i></div>
+                        <h3 class="font-orbitron text-base font-bold mb-1 texto-neon-vermelho">Número Atômico</h3>
+                        <p class="text-xs text-gray-400 mb-3">(Prótons / Elétrons)</p>
+                    </div>
+                    <p class="font-orbitron text-3xl font-black text-white">10</p>
+                </div>
+                
+                <!-- Cartão 2 -->
+                <div class="cartao-recurso caixa-neon-ciano p-6 rounded-2xl text-center transicao-suave efeito-brilho flex flex-col justify-between">
+                    <div>
+                        <div class="text-neonCiano text-3xl mb-3"><i class="fa-solid fa-weight-scale"></i></div>
+                        <h3 class="font-orbitron text-base font-bold mb-1 texto-neon-ciano">Massa Atômica</h3>
+                        <p class="text-xs text-gray-400 mb-3">(Peso Atômico Relativo)</p>
+                    </div>
+                    <p class="font-orbitron text-2xl font-black text-white">20,1797 u</p>
+                </div>
+                
+                <!-- Cartão 3 -->
+                <div class="cartao-recurso caixa-neon-rosa p-6 rounded-2xl text-center transicao-suave efeito-brilho flex flex-col justify-between">
+                    <div>
+                        <div class="text-neonRosa text-3xl mb-3"><i class="fa-solid fa-layer-group"></i></div>
+                        <h3 class="font-orbitron text-base font-bold mb-1 texto-neon-rosa">Classificação</h3>
+                        <p class="text-xs text-gray-400 mb-3">(Família Química)</p>
+                    </div>
+                    <div>
+                        <p class="font-orbitron text-xl font-black text-white">Grupo 18</p>
+                        <span class="text-xs text-gray-300">(Gases Nobres)</span>
+                    </div>
+                </div>
+
+                <!-- Cartão 4 -->
+                <div class="cartao-recurso caixa-neon-ciano p-6 rounded-2xl text-center transicao-suave efeito-brilho flex flex-col justify-between">
+                    <div>
+                        <div class="text-neonCiano text-3xl mb-3"><i class="fa-solid fa-temperature-low"></i></div>
+                        <h3 class="font-orbitron text-base font-bold mb-1 texto-neon-ciano">Ponto de Fusão</h3>
+                        <p class="text-xs text-gray-400 mb-3">(Temperatura Sólido-Líquido)</p>
+                    </div>
+                    <p class="font-orbitron text-xl font-black text-white">-248,6 °C</p>
+                </div>
+
+                <!-- Cartão 5 -->
+                <div class="cartao-recurso caixa-neon-rosa p-6 rounded-2xl text-center transicao-suave efeito-brilho flex flex-col justify-between">
+                    <div>
+                        <div class="text-neonRosa text-3xl mb-3"><i class="fa-solid fa-temperature-high"></i></div>
+                        <h3 class="font-orbitron text-base font-bold mb-1 texto-neon-rosa">Ponto de Ebulição</h3>
+                        <p class="text-xs text-gray-400 mb-3">(Temperatura Líquido-Gás)</p>
+                    </div>
+                    <p class="font-orbitron text-xl font-black text-white">-246,05 °C</p>
+                </div>
+
+                <!-- Cartão 6 -->
+                <div class="cartao-recurso caixa-neon-vermelho p-6 rounded-2xl text-center transicao-suave efeito-brilho flex flex-col justify-between">
+                    <div>
+                        <div class="text-neonVermelho text-3xl mb-3"><i class="fa-solid fa-atom"></i></div>
+                        <h3 class="font-orbitron text-base font-bold mb-1 texto-neon-vermelho">Config. Eletrônica</h3>
+                        <p class="text-xs text-gray-400 mb-3">(Camadas de Valência)</p>
+                    </div>
+                    <p class="font-orbitron text-lg font-black text-white">[He] 2s² 2p⁶</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO SOBRE O ELEMENTO E HISTÓRIA -->
+    <section id="sobre" class="py-20 sm:py-28 px-4 bg-black/50 border-y border-white/5">
+        <div class="max-w-[1100px] mx-auto space-y-16">
+            
+            <!-- Bloco 1 -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 conteudo-texto caixa-neon-ciano p-6 sm:p-10 rounded-2xl">
+                    <h2 class="font-orbitron text-2xl sm:text-3xl font-bold mb-6 texto-neon-ciano flex items-center gap-3">
+                        <i class="fa-solid fa-lightbulb"></i> O que é o Neônio?
+                    </h2>
+                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed text-left sm:text-justify mb-4">
+                        O <strong class="text-white">Néon</strong> (português europeu) ou <strong class="text-white">Neônio</strong> (português brasileiro) é um gás nobre incolor, inodoro, insípido e quimicamente inerte em condições normais. 
+                    </p>
+                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed text-left sm:text-justify mb-4">
+                        Embora seja o <strong class="text-white">quinto elemento mais abundante no universo</strong> em massa, ele é extremamente raro na atmosfera da Terra (cerca de 0,0018% em volume). É obtido comercialmente como subproduto da liquefação do ar atmosférico seguida por <strong class="text-cyan-400">destilação fracionada</strong>.
+                    </p>
+                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+                        Sua marca registrada é a espetacular <strong class="text-white">incandescência vermelho-alaranjada brilhante</strong> emitida quando submetido a campos elétricos de alta voltagem em tubos de descarga rarefeita.
+                    </p>
+                </div>
+                
+                <div class="lg:col-span-5">
+                    <div class="caixa-neon-ciano p-4 rounded-2xl bg-black/60 text-center relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-t from-cyan-500/20 to-transparent opacity-50"></div>
+                        <img src="images/neon1.png" 
+                             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=600&q=80';" 
+                             alt="Efeito de luz neon e tubos de gás" 
+                             class="rounded-xl w-full h-64 object-cover border border-cyan-500/40 group-hover:scale-105 transicao-suave">
+                        <p class="text-xs text-cyan-300 mt-3 font-orbitron">Estética de descarga elétrica e luminescência</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloco 2 -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-5 order-2 lg:order-1">
+                    <div class="caixa-neon-rosa p-4 rounded-2xl bg-black/60 text-center relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-t from-pink-500/20 to-transparent opacity-50"></div>
+                        <img src="images/neon2.png" 
+                             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80';" 
+                             alt="Laboratório de química e pesquisa histórica" 
+                             class="rounded-xl w-full h-64 object-cover border border-pink-500/40 group-hover:scale-105 transicao-suave">
+                        <p class="text-xs text-pink-300 mt-3 font-orbitron">Pesquisa espectroscópica do final do século XIX</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 order-1 lg:order-2 conteudo-texto caixa-neon-rosa p-6 sm:p-10 rounded-2xl">
+                    <h2 class="font-orbitron text-2xl sm:text-3xl font-bold mb-6 texto-neon-rosa flex items-center gap-3">
+                        <i class="fa-solid fa-compass"></i> A Descoberta (1898)
+                    </h2>
+                    <div class="clearfix mb-4">
+                        <span class="font-orbitron text-5xl sm:text-6xl font-black float-left mr-4 leading-none texto-neon-rosa piscar">1898</span>
+                        <p class="text-gray-300 text-sm sm:text-base leading-relaxed text-left sm:text-justify pt-1">
+                            O neônio foi descoberto em Londres pelos químicos britânicos <strong class="text-white">Sir William Ramsay</strong> e <strong class="text-white">Morris Travers</strong>. 
+                        </p>
+                    </div>
+                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed text-left sm:text-justify mb-4">
+                        Eles isolaram o elemento ao resfriar uma amostra de ar atmosférico até o estado líquido, aquecendo-o lentamente e recolhendo os gases desprendidos nas diferentes faixas de evaporação fracionada.
+                    </p>
+                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+                        O nome "néon" veio da raiz grega <em class="text-neonRosa font-semibold">neos</em> ("novo"). Ao observar a luz vermelha brilhante emitida pelo tubo de descarga do gás recém-isolado, Ramsay relatou ter vivido <strong class="text-white">“uma visão de beleza incrível que gravou-se na memória”</strong>.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SEÇÃO APLICAÇÕES TECNOLÓGICAS -->
+    <section id="aplicacoes" class="py-20 sm:py-28 px-4">
+        <div class="max-w-[1100px] mx-auto">
+            <h2 class="font-orbitron text-2xl sm:text-4xl text-center font-bold mb-4 texto-neon-vermelho">
+                Principais Aplicações
+            </h2>
+            <p class="text-center text-gray-400 text-sm max-w-xl mx-auto mb-12">
+                De letreiros urbanos icônicos a sistemas avançados de refrigeração industrial e ótica quântica.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- App 1 -->
+                <div class="item-aplicacao caixa-neon-vermelho p-6 sm:p-8 rounded-2xl relative overflow-hidden transicao-suave efeito-brilho flex flex-col justify-between">
+                    <div>
+                        <div class="text-neonVermelho text-3xl mb-4"><i class="fa-solid fa-bolt"></i></div>
+                        <h3 class="font-orbitron text-lg font-bold mb-3 texto-neon-vermelho">Letreiros Luminosos</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed text-left sm:text-justify">
+                            Sua utilidade mais popular. Tubos de vidro preenchidos com gás néon puro geram um tom avermelhado intenso. Misturado a outros gases e pós fluorescentes, dá origem à famosa estética colorida de placas comerciais e centros urbanos cyberpunk.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- App 2 -->
+                <div class="item-aplicacao caixa-neon-ciano p-6 sm:p-8 rounded-2xl relative overflow-hidden transicao-suave efeito-brilho flex flex-col justify-between">
+                    <div>
+                        <div class="text-neonCiano text-3xl mb-4"><i class="fa-solid fa-wave-square"></i></div>
+                        <h3 class="font-orbitron text-lg font-bold mb-3 texto-neon-ciano">Lasers de Hélio-Néon</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed text-left sm:text-justify">
+                            A combinação gasosa de hélio e néon produz um feixe laser contínuo de luz vermelha coerente de alta precisão. É largamente aplicado em leitores ópticos de código de barras, holografia laboratorial e alinhamentos industriais.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- App 3 -->
+                <div class="item-aplicacao caixa-neon-rosa p-6 sm:p-8 rounded-2xl relative overflow-hidden transicao-suave efeito-brilho flex flex-col justify-between">
+                    <div>
+                        <div class="text-neonRosa text-3xl mb-4"><i class="fa-solid fa-snowflake"></i></div>
+                        <h3 class="font-orbitron text-lg font-bold mb-3 texto-neon-rosa">Criogenia Avançada</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed text-left sm:text-justify">
+                            Na forma líquida, o neônio é um refrigerante criogênico formidável. Ele possui uma capacidade de refrigeração volumétrica <strong class="text-white">cerca de 40 vezes superior à do hélio líquido</strong> e mais de 3 vezes superior à do hidrogênio líquido.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO CRÉDITOS -->
+    <section id="creditos" class="py-20 sm:py-28 px-4 bg-black/90 border-t border-white/10">
+        <div class="max-w-[1100px] mx-auto space-y-16">
+            
+            <!-- Corpo Docente -->
+            <div>
+                <h2 class="font-orbitron text-2xl sm:text-3xl text-center font-bold mb-10 texto-neon-ciano">
+                    Corpo Docente
+                </h2>
+                <div class="flex flex-wrap justify-center gap-8">
+                    <!-- Prof. Elaine -->
+                    <div class="cartao-perfil caixa-neon-ciano p-6 rounded-2xl w-full sm:w-[280px] text-center transicao-suave efeito-brilho flex flex-col items-center">
+                        <img src="images/elaine.png" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/150x150/00f3ff/050505?text=Prof+Elaine';" 
+                             alt="Professora de Química" 
+                             class="w-28 h-28 rounded-full object-cover mb-4 border-2 border-cyan-400 sombra-imagem-ciano">
+                        <h4 class="font-poppins font-semibold text-lg text-white mb-1">Prof. Elaine</h4>
+                        <p class="text-xs uppercase tracking-wider text-cyan-400 font-orbitron mb-2">Química</p>
+                        <p class="text-xs text-gray-400">Orientação temática e fundamentos científicos.</p>
+                    </div>
+                    
+                    <!-- Prof. Allan -->
+                    <div class="cartao-perfil caixa-neon-ciano p-6 rounded-2xl w-full sm:w-[280px] text-center transicao-suave efeito-brilho flex flex-col items-center">
+                        <img src="images/alan.png" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/150x150/00f3ff/050505?text=Prof+Allan';" 
+                             alt="Professor de Programação Web" 
+                             class="w-28 h-28 rounded-full object-cover mb-4 border-2 border-cyan-400 sombra-imagem-ciano">
+                        <h4 class="font-poppins font-semibold text-lg text-white mb-1">Prof. Allan</h4>
+                        <p class="text-xs uppercase tracking-wider text-cyan-400 font-orbitron mb-2">Programação Web II</p>
+                        <p class="text-xs text-gray-400">Orientação técnica de desenvolvimento front-end e back-end.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aluno Desenvolvedor -->
+            <div>
+                <h2 class="font-orbitron text-2xl sm:text-3xl text-center font-bold mb-10 texto-neon-rosa">
+                    Desenvolvido por
+                </h2>
+                <div class="flex justify-center">
+                    <div class="cartao-perfil caixa-neon-rosa p-6 rounded-2xl w-full sm:w-[320px] text-center transicao-suave efeito-brilho flex flex-col items-center">
+                        <img src="images/aluno.png" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/150x150/ff00ff/050505?text=Davi+Costa';" 
+                             alt="Foto do Aluno Desenvolvedor" 
+                             class="w-28 h-28 rounded-full object-cover mb-4 border-2 border-pink-500 sombra-imagem-rosa">
+                        <h4 class="font-poppins font-semibold text-lg text-white mb-1">Davi Costa</h4>
+                        <p class="text-xs uppercase tracking-wider text-pink-400 font-orbitron mb-3">Estudante & Desenvolvedor</p>
+                        <p class="text-xs text-gray-400 mb-4">Criação da interface cyberpunk, estruturação web e estilização responsiva.</p>
+                        
+                        <div class="flex gap-4 text-xl links-sociais">
+                            <a href="https://www.instagram.com/davi.cs1/" aria-label="Instagram" class="text-gray-300 transicao-suave"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/davi-costa-da-silva-52b441392/?isSelfProfile=true" aria-label="LinkedIn" class="text-gray-300 transicao-suave"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://github.com/DaviCosta2009" aria-label="GitHub" class="text-gray-300 transicao-suave"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- RODAPÉ E FONTES DE PESQUISA -->
+    <footer class="bg-black py-12 px-4 border-t-2 border-neonCiano text-center relative">
+        <div class="max-w-[1100px] mx-auto space-y-6">
+            <h3 class="font-orbitron text-sm sm:text-base font-semibold texto-neon-ciano">Fontes de Pesquisa Oficiais</h3>
+            <ul class="flex flex-wrap justify-center gap-4 text-xs sm:text-sm font-orbitron lista-fontes">
+                <li>
+                    <a href="https://brasilescola.uol.com.br/quimica/gas-neonio.htm" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400 text-gray-200 transicao-suave">
+                        <i class="fa-solid fa-graduation-cap"></i> Brasil Escola: Neônio
+                    </a>
+                </li>
+                <li>
+                    <a href="https://pt.wikipedia.org/wiki/N%C3%A9on" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400 text-gray-200 transicao-suave">
+                        <i class="fa-brands fa-wikipedia-w"></i> Wikipédia: Néon
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.tabelaperiodica.org/neonio/" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400 text-gray-200 transicao-suave">
+                        <i class="fa-solid fa-table"></i> Tabela Periódica: Neônio
+                    </a>
+                </li>
+            </ul>
+            <p class="text-xs text-gray-500 pt-4">
+                Trabalho acadêmico interdisciplinar integrado — Disciplinas de Química e Programação Web II
+            </p>
+        </div>
+
+        <!-- Botão Flutuante Voltar ao Topo -->
+        <button id="botao-voltar-ao-topo" class="fixed bottom-6 right-6 z-40 hidden p-3 rounded-full bg-black border-2 border-cyan-400 text-cyan-400 sombra-botao-topo transicao-suave" aria-label="Voltar ao topo">
+            <i class="fa-solid fa-arrow-up text-lg"></i>
+        </button>
+    </footer>
+
+    <!-- Arquivo JS Externo -->
+    <script src="js/script.js"></script>
+</body>
+</html>
